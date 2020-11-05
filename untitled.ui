@@ -23,134 +23,16 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string notr="true">Kuнoмaнuя NEWS</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>logo.png</normaloff>logo.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">font: 75 10pt &quot;Comfortaa&quot;;
 background: #3a3a3a;</string>
   </property>
-  <widget class="QLabel" name="label_link">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>20</y>
-     <width>121</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Comfortaa</family>
-     <pointsize>10</pointsize>
-     <weight>9</weight>
-     <italic>false</italic>
-     <bold>false</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: #fff;</string>
-   </property>
-   <property name="text">
-    <string>Ссылка на сайт</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_Age">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>70</y>
-     <width>191</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Comfortaa</family>
-     <pointsize>10</pointsize>
-     <weight>9</weight>
-     <italic>false</italic>
-     <bold>false</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: #fff;</string>
-   </property>
-   <property name="text">
-    <string>Возрастное ограничение</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_Year">
-   <property name="geometry">
-    <rect>
-     <x>280</x>
-     <y>70</y>
-     <width>111</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Comfortaa</family>
-     <pointsize>10</pointsize>
-     <weight>9</weight>
-     <italic>false</italic>
-     <bold>false</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: #fff;</string>
-   </property>
-   <property name="text">
-    <string>Год выхода</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_time">
-   <property name="geometry">
-    <rect>
-     <x>460</x>
-     <y>70</y>
-     <width>181</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Comfortaa</family>
-     <pointsize>10</pointsize>
-     <weight>9</weight>
-     <italic>false</italic>
-     <bold>false</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: #fff;</string>
-   </property>
-   <property name="text">
-    <string>Длительность фильма</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_link">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>10</y>
-     <width>501</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background: #fff;
-color: #000;
-padding: 10px;
-border-radius: 20px;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="placeholderText">
-    <string/>
-   </property>
-  </widget>
   <widget class="QPushButton" name="pushButton">
    <property name="enabled">
     <bool>true</bool>
@@ -199,62 +81,357 @@ border-radius: 10px;</string>
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_Age">
+  <widget class="QToolButton" name="toolButton">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>120</y>
-     <width>171</width>
+     <x>570</x>
+     <y>240</y>
+     <width>91</width>
      <height>41</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
    <property name="styleSheet">
-    <string notr="true">background: #fff;
-color: #000;
-padding: 10px;
-border-radius: 20px;</string>
+    <string notr="true">background: #a016f0;
+color: #fff;
+border-radius: 10px;</string>
    </property>
    <property name="text">
-    <string/>
+    <string>Settings</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_Year">
+  <widget class="QTreeWidget" name="treeWidget">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>120</y>
-     <width>101</width>
-     <height>41</height>
+     <x>170</x>
+     <y>180</y>
+     <width>151</width>
+     <height>101</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background: #fff;
-color: #000;
-padding: 10px;
-border-radius: 20px;</string>
+    <string notr="true">background-color: #a016f0;</string>
    </property>
-   <property name="text">
-    <string/>
-   </property>
+   <column>
+    <property name="text">
+     <string>Хоррор</string>
+    </property>
+   </column>
+   <item>
+    <property name="text">
+     <string>:scream:</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>:jack_o_lantern:</string>
+    </property>
+   </item>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_time">
+  <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
-     <x>460</x>
-     <y>120</y>
-     <width>171</width>
-     <height>41</height>
+     <x>10</x>
+     <y>60</y>
+     <width>651</width>
+     <height>91</height>
     </rect>
    </property>
-   <property name="styleSheet">
-    <string notr="true">background: #fff;
+   <layout class="QGridLayout" name="other_Input">
+    <item row="1" column="2">
+     <widget class="QLabel" name="label_Age">
+      <property name="font">
+       <font>
+        <family>Comfortaa</family>
+        <pointsize>10</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #fff;</string>
+      </property>
+      <property name="text">
+       <string>Возраст</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="6">
+     <widget class="QLineEdit" name="lineEdit_smile1">
+      <property name="styleSheet">
+       <string notr="true">background: #fff;
 color: #000;
 padding: 10px;
 border-radius: 20px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="6">
+     <widget class="QLabel" name="label_smile">
+      <property name="font">
+       <font>
+        <family>Comfortaa</family>
+        <pointsize>10</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #fff;</string>
+      </property>
+      <property name="text">
+       <string>Смайл-1</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="5">
+     <widget class="QLabel" name="label_color">
+      <property name="font">
+       <font>
+        <family>Comfortaa</family>
+        <pointsize>10</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #fff;</string>
+      </property>
+      <property name="text">
+       <string>Цвет</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="4">
+     <widget class="QLineEdit" name="lineEdit_time">
+      <property name="styleSheet">
+       <string notr="true">background: #fff;
+color: #000;
+padding: 10px;
+border-radius: 20px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>110</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLineEdit" name="lineEdit_Year">
+      <property name="styleSheet">
+       <string notr="true">background: #fff;
+color: #000;
+padding: 10px;
+border-radius: 20px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>2012</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="4">
+     <widget class="QLabel" name="label_time">
+      <property name="font">
+       <font>
+        <family>Comfortaa</family>
+        <pointsize>10</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #fff;</string>
+      </property>
+      <property name="text">
+       <string>Длительность</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="7">
+     <widget class="QLabel" name="label_smile_2">
+      <property name="font">
+       <font>
+        <family>Comfortaa</family>
+        <pointsize>10</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #fff;</string>
+      </property>
+      <property name="text">
+       <string>Смайл-2</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_Year">
+      <property name="font">
+       <font>
+        <family>Comfortaa</family>
+        <pointsize>10</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #fff;</string>
+      </property>
+      <property name="text">
+       <string>Год выхода</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="5">
+     <widget class="QLineEdit" name="lineEdit_color">
+      <property name="styleSheet">
+       <string notr="true">background: #fff;
+color: #000;
+padding: 10px;
+border-radius: 20px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QLineEdit" name="lineEdit_Age">
+      <property name="styleSheet">
+       <string notr="true">background: #fff;
+color: #000;
+padding: 10px;
+border-radius: 20px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>18</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="7">
+     <widget class="QLineEdit" name="lineEdit_smile2">
+      <property name="styleSheet">
+       <string notr="true">background: #fff;
+color: #000;
+padding: 10px;
+border-radius: 20px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>651</width>
+     <height>45</height>
+    </rect>
    </property>
-   <property name="text">
-    <string/>
-   </property>
+   <layout class="QGridLayout" name="main_Link">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_link">
+      <property name="font">
+       <font>
+        <family>Comfortaa</family>
+        <pointsize>10</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="whatsThis">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Здесь должна быть ссылка на сайт.&lt;/p&gt;&lt;p&gt;Рекомендованный сайт - HDREZKA&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #fff;
+margin-right: 20px;</string>
+      </property>
+      <property name="text">
+       <string>Ссылка на сайт</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="lineEdit_link">
+      <property name="styleSheet">
+       <string notr="true">background: #fff;
+color: #000;
+padding: 10px;
+border-radius: 20px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>http://101kinopoisk.com/films/horror/549-sinister-2012.html</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>

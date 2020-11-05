@@ -42,7 +42,7 @@ def get_content(html, url):
     rate_imdb = soup.find('span', class_='b-post__info_rates imdb').find('span').get_text()
 
     webhook = DiscordWebhooks(WEBHOOK_URL)
-    webhook.set_content(title=f'**:film_frames: {title} :movie_camera:**', url=url, color=0x00AAFF)
+    webhook.set_content(title=f'**{ui.lineEdit_smile1.text()} {title} {ui.lineEdit_smile2.text()}**', url=url, color=0x00AAFF)
     webhook.add_field(name='Информация о фильме', value=f"*{description}*")
     webhook.set_thumbnail(url=image)
     webhook.set_image(url=image)
@@ -59,12 +59,16 @@ def get_content(html, url):
 
 def parser():
     url = ui.lineEdit_link.text()
-    html = get_html(url)
-    if html.status_code == 200:
-        get_content(html.text, url)
-        print('Сообщение успешно отправлено!')
+    if url == '':
+        print('error')
+        ui.lineEdit_link.setText('http://101kinopoisk.com/films/horror/549-sinister-2012.html')
     else:
-        print('Error')
+        html = get_html(url)
+        if html.status_code == 200:
+            get_content(html.text, url)
+            print('Сообщение успешно отправлено!')
+        else:
+            print('Error')
 
 
 #code
