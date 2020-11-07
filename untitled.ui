@@ -84,7 +84,7 @@ border-radius: 10px;</string>
   <widget class="QToolButton" name="toolButton">
    <property name="geometry">
     <rect>
-     <x>570</x>
+     <x>150</x>
      <y>240</y>
      <width>91</width>
      <height>41</height>
@@ -102,46 +102,18 @@ border-radius: 10px;</string>
     <string>Settings</string>
    </property>
   </widget>
-  <widget class="QTreeWidget" name="treeWidget">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>180</y>
-     <width>151</width>
-     <height>101</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: #a016f0;</string>
-   </property>
-   <column>
-    <property name="text">
-     <string>Хоррор</string>
-    </property>
-   </column>
-   <item>
-    <property name="text">
-     <string>:scream:</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>:jack_o_lantern:</string>
-    </property>
-   </item>
-  </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
      <y>60</y>
      <width>651</width>
-     <height>91</height>
+     <height>72</height>
     </rect>
    </property>
    <layout class="QGridLayout" name="other_Input">
-    <item row="1" column="2">
-     <widget class="QLabel" name="label_Age">
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_Year">
       <property name="font">
        <font>
         <family>Comfortaa</family>
@@ -155,15 +127,34 @@ border-radius: 10px;</string>
        <string notr="true">color: #fff;</string>
       </property>
       <property name="text">
-       <string>Возраст</string>
+       <string>Год выхода</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
     </item>
-    <item row="2" column="6">
-     <widget class="QLineEdit" name="lineEdit_smile1">
+    <item row="2" column="4">
+     <widget class="QLineEdit" name="lineEdit_time">
+      <property name="styleSheet">
+       <string notr="true">background: #fff;
+color: #000;
+padding: 10px;
+border-radius: 20px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>110</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="5">
+     <widget class="QLineEdit" name="lineEdit_color">
       <property name="styleSheet">
        <string notr="true">background: #fff;
 color: #000;
@@ -178,8 +169,8 @@ border-radius: 20px;</string>
       </property>
      </widget>
     </item>
-    <item row="1" column="6">
-     <widget class="QLabel" name="label_smile">
+    <item row="1" column="4">
+     <widget class="QLabel" name="label_time">
       <property name="font">
        <font>
         <family>Comfortaa</family>
@@ -193,7 +184,7 @@ border-radius: 20px;</string>
        <string notr="true">color: #fff;</string>
       </property>
       <property name="text">
-       <string>Смайл-1</string>
+       <string>Длительность</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -222,8 +213,8 @@ border-radius: 20px;</string>
       </property>
      </widget>
     </item>
-    <item row="2" column="4">
-     <widget class="QLineEdit" name="lineEdit_time">
+    <item row="2" column="2">
+     <widget class="QLineEdit" name="lineEdit_Age">
       <property name="styleSheet">
        <string notr="true">background: #fff;
 color: #000;
@@ -237,7 +228,7 @@ border-radius: 20px;</string>
        <set>Qt::AlignCenter</set>
       </property>
       <property name="placeholderText">
-       <string>110</string>
+       <string>18</string>
       </property>
      </widget>
     </item>
@@ -260,8 +251,8 @@ border-radius: 20px;</string>
       </property>
      </widget>
     </item>
-    <item row="1" column="4">
-     <widget class="QLabel" name="label_time">
+    <item row="1" column="2">
+     <widget class="QLabel" name="label_Age">
       <property name="font">
        <font>
         <family>Comfortaa</family>
@@ -275,102 +266,7 @@ border-radius: 20px;</string>
        <string notr="true">color: #fff;</string>
       </property>
       <property name="text">
-       <string>Длительность</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="7">
-     <widget class="QLabel" name="label_smile_2">
-      <property name="font">
-       <font>
-        <family>Comfortaa</family>
-        <pointsize>10</pointsize>
-        <weight>9</weight>
-        <italic>false</italic>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: #fff;</string>
-      </property>
-      <property name="text">
-       <string>Смайл-2</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QLabel" name="label_Year">
-      <property name="font">
-       <font>
-        <family>Comfortaa</family>
-        <pointsize>10</pointsize>
-        <weight>9</weight>
-        <italic>false</italic>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: #fff;</string>
-      </property>
-      <property name="text">
-       <string>Год выхода</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="5">
-     <widget class="QLineEdit" name="lineEdit_color">
-      <property name="styleSheet">
-       <string notr="true">background: #fff;
-color: #000;
-padding: 10px;
-border-radius: 20px;</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="2">
-     <widget class="QLineEdit" name="lineEdit_Age">
-      <property name="styleSheet">
-       <string notr="true">background: #fff;
-color: #000;
-padding: 10px;
-border-radius: 20px;</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-      <property name="placeholderText">
-       <string>18</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="7">
-     <widget class="QLineEdit" name="lineEdit_smile2">
-      <property name="styleSheet">
-       <string notr="true">background: #fff;
-color: #000;
-padding: 10px;
-border-radius: 20px;</string>
-      </property>
-      <property name="text">
-       <string/>
+       <string>Возраст</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -379,7 +275,7 @@ border-radius: 20px;</string>
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -429,6 +325,232 @@ border-radius: 20px;</string>
       <property name="placeholderText">
        <string>http://101kinopoisk.com/films/horror/549-sinister-2012.html</string>
       </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>150</y>
+     <width>651</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="2">
+     <widget class="QComboBox" name="smile1">
+      <property name="styleSheet">
+       <string notr="true">background: rgb(145, 136, 137, 50);
+color: #000;
+padding: 10px;
+border-radius: 8px;</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>🍿</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>🎞️</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>👻</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>🔦</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>🎃</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>🕯️</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>⚰️</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>🔪</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>🔥</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>⚔️</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>🗺️</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>🧭</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>📀</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>🎈</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>🧨</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="0" column="3">
+     <widget class="QLabel" name="label_smile_2">
+      <property name="font">
+       <font>
+        <family>Comfortaa</family>
+        <pointsize>10</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #fff;</string>
+      </property>
+      <property name="text">
+       <string>Смайл-2</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_smile">
+      <property name="font">
+       <font>
+        <family>Comfortaa</family>
+        <pointsize>10</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #fff;</string>
+      </property>
+      <property name="text">
+       <string>Смайл-1</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="4">
+     <widget class="QComboBox" name="smile2">
+      <property name="styleSheet">
+       <string notr="true">background: rgb(145, 136, 137, 50);
+color: #000;
+padding: 10px;
+border-radius: 8px;</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>🎞️</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>🍿</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>👻</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>🔦</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>🎃</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>🕯️</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>⚰️</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>🔪</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>🔥</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>⚔️</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>🗺️</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>🧭</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>📀</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>🎈</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>🧨</string>
+       </property>
+      </item>
      </widget>
     </item>
    </layout>

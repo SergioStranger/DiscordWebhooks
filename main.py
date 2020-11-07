@@ -2,6 +2,7 @@
 import requests
 from bs4 import BeautifulSoup
 from discord_webhooks import DiscordWebhooks
+import discord
 from PyQt5 import QtCore, QtGui, QtWidgets
 import sys
 from design import Ui_Dialog
@@ -42,7 +43,8 @@ def get_content(html, url):
     rate_imdb = soup.find('span', class_='b-post__info_rates imdb').find('span').get_text()
 
     webhook = DiscordWebhooks(WEBHOOK_URL)
-    webhook.set_content(title=f'**{ui.lineEdit_smile1.text()} {title} {ui.lineEdit_smile2.text()}**', url=url, color=0x00AAFF)
+    webhook.set_content(title=f'**{ui.smile1.currentText()} {title} {ui.smile2.currentText()}**', url=url)
+    webhook.set_content(color=0xad16f0)
     webhook.add_field(name='Информация о фильме', value=f"*{description}*")
     webhook.set_thumbnail(url=image)
     webhook.set_image(url=image)
@@ -59,6 +61,7 @@ def get_content(html, url):
 
 def parser():
     url = ui.lineEdit_link.text()
+
     if url == '':
         print('error')
         ui.lineEdit_link.setText('http://101kinopoisk.com/films/horror/549-sinister-2012.html')
@@ -72,6 +75,8 @@ def parser():
 
 
 #code
+print(type(0xAD16F0)) # Открытие века!
+
 ui.pushButton.clicked.connect(lambda: parser())
 
 # Main Loop
