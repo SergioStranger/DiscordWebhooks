@@ -15,8 +15,10 @@ class Ui_Settings(object):
     def setupUi(self, Settings):
         Settings.setObjectName("Settings")
         Settings.resize(486, 240)
+        Settings.setStyleSheet("font: 75 10pt \"Comfortaa\";\n"
+"background: #3a3a3a;")
         self.buttonBox = QtWidgets.QDialogButtonBox(Settings)
-        self.buttonBox.setGeometry(QtCore.QRect(330, 160, 151, 71))
+        self.buttonBox.setGeometry(QtCore.QRect(330, 150, 151, 81))
         self.buttonBox.setStyleSheet("background: #a016f0;\n"
 "color: #fff;\n"
 "border-radius: 10px;\n"

@@ -61,6 +61,8 @@ class Ui_Main(object):
 "color: #000;\n"
 "padding: 10px;\n"
 "border-radius: 20px;")
+        self.lineEdit_color.setInputMethodHints(QtCore.Qt.ImhNone)
+        self.lineEdit_color.setInputMask("")
         self.lineEdit_color.setText("")
         self.lineEdit_color.setAlignment(QtCore.Qt.AlignCenter)
         self.lineEdit_color.setObjectName("lineEdit_color")
@@ -189,7 +191,7 @@ class Ui_Main(object):
         self.label_color.setText(_translate("Main", "Цвет"))
         self.label_link.setWhatsThis(_translate("Main", "<html><head/><body><p>Здесь должна быть ссылка на сайт.</p><p>Рекомендованный сайт - HDREZKA</p></body></html>"))
         self.label_link.setText(_translate("Main", "Ссылка на сайт"))
-        self.lineEdit_link.setPlaceholderText(_translate("Main", "http://101kinopoisk.com/films/horror/549-sinister-2012.html"))
+        self.lineEdit_link.setPlaceholderText(_translate("Main", "http://getkinopoisk.com/films/horror/549-sinister-2012.html"))
         self.smile1.setItemText(0, _translate("Main", "🍿"))
         self.smile1.setItemText(1, _translate("Main", "🎞️"))
         self.smile1.setItemText(2, _translate("Main", "👻"))

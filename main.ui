@@ -120,6 +120,12 @@ color: #000;
 padding: 10px;
 border-radius: 20px;</string>
       </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhNone</set>
+      </property>
+      <property name="inputMask">
+       <string/>
+      </property>
       <property name="text">
        <string/>
       </property>
@@ -200,7 +206,7 @@ border-radius: 20px;</string>
        <string/>
       </property>
       <property name="placeholderText">
-       <string>http://101kinopoisk.com/films/horror/549-sinister-2012.html</string>
+       <string>http://getkinopoisk.com/films/horror/549-sinister-2012.html</string>
       </property>
      </widget>
     </item>
