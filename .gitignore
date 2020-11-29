@@ -1,3 +1,4 @@
 # Default ignored files
-__pycache__
 .idea
+__pycache__
+settings_file.json

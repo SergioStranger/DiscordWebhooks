@@ -6,73 +6,326 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>486</width>
-    <height>240</height>
+    <width>661</width>
+    <height>378</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1000</width>
+    <height>1000</height>
+   </size>
+  </property>
   <property name="windowTitle">
-   <string>Настройки</string>
+   <string>Настройки | Kuнoмaнuя NEWS</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../Pictures/Logos/klinklinom-1000pxv5-1024x1024.png</normaloff>../../Pictures/Logos/klinklinom-1000pxv5-1024x1024.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">font: 75 10pt &quot;Comfortaa&quot;;
 background: #3a3a3a;</string>
   </property>
-  <widget class="QDialogButtonBox" name="buttonBox">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>150</y>
-     <width>151</width>
-     <height>81</height>
+     <x>20</x>
+     <y>20</y>
+     <width>621</width>
+     <height>141</height>
     </rect>
+   </property>
+   <layout class="QGridLayout" name="main_Link">
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_link_2">
+      <property name="font">
+       <font>
+        <family>Comfortaa</family>
+        <pointsize>10</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="whatsThis">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #fff;
+margin-right: 20px;</string>
+      </property>
+      <property name="text">
+       <string>Ссылка на страницу</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QLineEdit" name="lineEdit_UserName">
+      <property name="styleSheet">
+       <string notr="true">background: #fff;
+color: #000;
+padding: 10px;
+border-radius: 20px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Иван иванович</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_link">
+      <property name="font">
+       <font>
+        <family>Comfortaa</family>
+        <pointsize>10</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="whatsThis">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #fff;
+margin-right: 20px;</string>
+      </property>
+      <property name="text">
+       <string>Имя пользователя</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QLineEdit" name="lineEdit_UserLink">
+      <property name="styleSheet">
+       <string notr="true">background: #fff;
+color: #000;
+padding: 10px;
+border-radius: 20px;</string>
+      </property>
+      <property name="inputMask">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>https://vk.com/havename</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_link_3">
+      <property name="font">
+       <font>
+        <family>Comfortaa</family>
+        <pointsize>10</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="whatsThis">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #fff;
+margin-right: 20px;</string>
+      </property>
+      <property name="text">
+       <string>Ссылка на картинку</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QLineEdit" name="lineEdit_UserImage">
+      <property name="styleSheet">
+       <string notr="true">background: #fff;
+color: #000;
+padding: 10px;
+border-radius: 20px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>https://</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>320</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
     <string notr="true">background: #a016f0;
 color: #fff;
-border-radius: 10px;
-padding: 10px;</string>
+border-radius: 10px;</string>
    </property>
-   <property name="orientation">
-    <enum>Qt::Vertical</enum>
+   <property name="text">
+    <string>Сохранить</string>
    </property>
-   <property name="standardButtons">
-    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+  </widget>
+  <widget class="QPushButton" name="pushButton_Cancel">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>320</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: #a016f0;
+color: #fff;
+border-radius: 10px;</string>
+   </property>
+   <property name="text">
+    <string>Отмена</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>290</y>
+     <width>191</width>
+     <height>72</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="other_Input">
+    <item row="2" column="2">
+     <widget class="QLineEdit" name="lineEdit_color">
+      <property name="styleSheet">
+       <string notr="true">background: #fff;
+color: #000;
+padding: 10px;
+border-radius: 20px;</string>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhNone</set>
+      </property>
+      <property name="inputMask">
+       <string/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QLabel" name="label_color">
+      <property name="font">
+       <font>
+        <family>Comfortaa</family>
+        <pointsize>10</pointsize>
+        <weight>9</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #fff;</string>
+      </property>
+      <property name="text">
+       <string>Цвет</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_UserWebhook">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>230</y>
+     <width>581</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: #fff;
+color: #000;
+padding: 10px;
+border-radius: 20px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>https://discord.com/api/webhooks</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_link_4">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>180</y>
+     <width>175</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Comfortaa</family>
+     <pointsize>10</pointsize>
+     <weight>9</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="whatsThis">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #fff;</string>
+   </property>
+   <property name="text">
+    <string>Discord Webhook</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
    </property>
   </widget>
  </widget>
  <resources/>
- <connections>
-  <connection>
-   <sender>buttonBox</sender>
-   <signal>accepted()</signal>
-   <receiver>Settings</receiver>
-   <slot>accept()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>248</x>
-     <y>254</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>157</x>
-     <y>274</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>buttonBox</sender>
-   <signal>rejected()</signal>
-   <receiver>Settings</receiver>
-   <slot>reject()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>316</x>
-     <y>260</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>286</x>
-     <y>274</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>
