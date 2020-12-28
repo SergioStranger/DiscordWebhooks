@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'main.ui'
+# Form implementation generated from reading ui file 'design.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.1
 #
@@ -44,7 +44,7 @@ class Ui_Main(object):
         self.pushButton.setDefault(False)
         self.pushButton.setObjectName("pushButton")
         self.toolButton = QtWidgets.QToolButton(Main)
-        self.toolButton.setGeometry(QtCore.QRect(160, 150, 120, 40))
+        self.toolButton.setGeometry(QtCore.QRect(520, 150, 120, 40))
         self.toolButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.toolButton.setStyleSheet("background: #a016f0;\n"
 "color: #fff;\n"
@@ -151,6 +151,17 @@ class Ui_Main(object):
         self.smile2.addItem("")
         self.smile2.addItem("")
         self.gridLayout.addWidget(self.smile2, 0, 4, 1, 1)
+        self.aboutSend = QtWidgets.QComboBox(Main)
+        self.aboutSend.setGeometry(QtCore.QRect(160, 150, 130, 40))
+        self.aboutSend.setStyleSheet("background: rgb(145, 136, 137, 50);\n"
+"color: #fff;\n"
+"padding: 10px;\n"
+"border-radius: 8px;")
+        self.aboutSend.setObjectName("aboutSend")
+        self.aboutSend.addItem("")
+        self.aboutSend.addItem("")
+        self.aboutSend.addItem("")
+        self.aboutSend.addItem("")
 
         self.retranslateUi(Main)
         QtCore.QMetaObject.connectSlotsByName(Main)
@@ -194,6 +205,11 @@ class Ui_Main(object):
         self.smile2.setItemText(12, _translate("Main", "📀"))
         self.smile2.setItemText(13, _translate("Main", "🎈"))
         self.smile2.setItemText(14, _translate("Main", "🧨"))
+        self.aboutSend.setWhatsThis(_translate("Main", "<html><head/><body><p>Выберите из списка к какой категории отностится публикуемый контент. *<span style=\" font-style:italic;\">В зависимости от выбора, будут примененны разные алгоритмы вывода фильмов</span></p></body></html>"))
+        self.aboutSend.setItemText(0, _translate("Main", "Фильм"))
+        self.aboutSend.setItemText(1, _translate("Main", "Сериал"))
+        self.aboutSend.setItemText(2, _translate("Main", "Мультфильм"))
+        self.aboutSend.setItemText(3, _translate("Main", "Аниме"))
 
 
 if __name__ == "__main__":

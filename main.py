@@ -44,14 +44,6 @@ def push_content(html, url):
     for td in soup.find('table').parent.find_all('td'):
         table.append(td.getText())
 
-    # print(f'Слоган: {table[3]}')
-    # print(f'Дата выхода: {table[5]}')
-    # print(f'Страна: {table[7]}')
-    # print(f'Режисер: {table[9]}')
-    # print(f'Возрастное ограничение: {table[17]}')
-    # print(f'Длительность: {table[19]}')
-
-
     title = soup.find('div', class_='b-post__title').get_text()
     description = soup.find('div', class_='b-post__description_text').get_text(strip=True)
     image = soup.find('div', class_='b-sidecover').find('img').get('src')
@@ -63,22 +55,61 @@ def push_content(html, url):
 
     webhook = DiscordWebhooks(json_data[0]['DiscordWebhook'])
 
-    webhook.set_content(title=f'{ui.smile1.currentText()} **{title}** {ui.smile2.currentText()}', url=url, color=0x00AAFF)
-    webhook.add_field(inline=True, name='Слоган', value=table[3])
-    webhook.add_field(inline=True, name='Режисер', value=table[9])
-    webhook.add_field(name='Информация о фильме', value=f'*{description}*')
-    webhook.add_field(name='Смотреть онлайн бесплатно', value=f'{url}')
-    webhook.set_thumbnail(url=image)
-    webhook.set_image(url=image)
+    if ui.aboutSend.currentText() == 'Фильм' or ui.aboutSend.currentText() == 'Мультфильм':
 
-    webhook.set_author(name=json_data[0]['UserName'], url=json_data[0]['UserLink'],
-                       icon_url=json_data[0]['UserImage'])
-    webhook.add_field(inline=True, name=':map: Страна:', value=table[7])
-    webhook.add_field(inline=True, name=':flag_ru: Рейтинг Кинопоиск: ', value=f'{rate_KP}')
-    webhook.add_field(inline=True, name=':flag_us: Рейтинг IMDb: ', value=f'{rate_imdb}')
-    webhook.set_footer(
-        text=f'Дата выхода {table[5]}  |  Длительность фильма {table[19]}\nВозрасное ограничение {table[17]}',
-        icon_url='https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.pngpix.com%2Fwp-content%2Fuploads%2F2016%2F07%2FPNGPIX-COM-Popcorn-PNG-Image.png&f=1&nofb=1')
+        webhook.set_content(title=f'{ui.smile1.currentText()} **{title}** {ui.smile2.currentText()}', url=url, color=0x00AAFF)
+        webhook.add_field(inline=True, name='Слоган', value=table[3])
+        webhook.add_field(inline=True, name='Режисер', value=table[9])
+        webhook.add_field(name='Информация о фильме', value=f'*{description}*')
+        webhook.add_field(name='Смотреть онлайн бесплатно', value=f'{url}')
+        webhook.set_thumbnail(url=image)
+        webhook.set_image(url=image)
+
+        webhook.set_author(name=json_data[0]['UserName'], url=json_data[0]['UserLink'],
+                           icon_url=json_data[0]['UserImage'])
+        webhook.add_field(inline=True, name=':map: Страна:', value=table[7])
+        webhook.add_field(inline=True, name=':flag_ru: Рейтинг Кинопоиск: ', value=f'{rate_KP}')
+        webhook.add_field(inline=True, name=':flag_us: Рейтинг IMDb: ', value=f'{rate_imdb}')
+        webhook.set_footer(
+            text=f'Дата выхода {table[5]}  |  Длительность фильма {table[19]}\nВозрасное ограничение {table[17]}',
+            icon_url='https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.pngpix.com%2Fwp-content%2Fuploads%2F2016%2F07%2FPNGPIX-COM-Popcorn-PNG-Image.png&f=1&nofb=1')
+
+    elif ui.aboutSend.currentText() == 'Сериал':
+        webhook.set_content(title=f'{ui.smile1.currentText()} **{title}** {ui.smile2.currentText()}', url=url,
+                            color=0x00AAFF)
+        webhook.add_field(inline=True, name='Режисер', value=table[9])
+        webhook.add_field(name='Информация о фильме', value=f'*{description}*')
+        webhook.add_field(name='Смотреть онлайн бесплатно', value=f'{url}')
+        webhook.set_thumbnail(url=image)
+        webhook.set_image(url=image)
+
+        webhook.set_author(name=json_data[0]['UserName'], url=json_data[0]['UserLink'],
+                           icon_url=json_data[0]['UserImage'])
+        webhook.add_field(inline=True, name=':map: Страна:', value=table[7])
+        webhook.add_field(inline=True, name=':flag_ru: Рейтинг Кинопоиск: ', value=f'{rate_KP}')
+        webhook.add_field(inline=True, name=':flag_us: Рейтинг IMDb: ', value=f'{rate_imdb}')
+        webhook.set_footer(
+            text=f'Дата выхода {table[5]}  |  Длительность фильма {table[17]}\nВозрасное ограничение {table[15]}',
+            icon_url='https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.pngpix.com%2Fwp-content%2Fuploads%2F2016%2F07%2FPNGPIX-COM-Popcorn-PNG-Image.png&f=1&nofb=1')
+
+    elif ui.aboutSend.currentText() == 'Аниме':
+        webhook.set_content(title=f'{ui.smile1.currentText()} **{title}** {ui.smile2.currentText()}', url=url,
+                            color=0x00AAFF)
+        webhook.add_field(inline=True, name='Слоган', value=table[5])
+        webhook.add_field(inline=True, name='Режисер', value=table[11])
+        webhook.add_field(name='Информация о фильме', value=f'*{description}*')
+        webhook.add_field(name='Смотреть онлайн бесплатно', value=f'{url}')
+        webhook.set_thumbnail(url=image)
+        webhook.set_image(url=image)
+
+        webhook.set_author(name=json_data[0]['UserName'], url=json_data[0]['UserLink'],
+                           icon_url=json_data[0]['UserImage'])
+        webhook.add_field(inline=True, name=':map: Страна:', value=table[9])
+        webhook.add_field(inline=True, name=':flag_ru: Рейтинг Кинопоиск: ', value=f'{rate_KP}')
+        webhook.add_field(inline=True, name=':flag_us: Рейтинг IMDb: ', value=f'{rate_imdb}')
+        webhook.set_footer(
+            text=f'Дата выхода {table[7]}  |  Длительность фильма {table[19]}',
+            icon_url='https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.pngpix.com%2Fwp-content%2Fuploads%2F2016%2F07%2FPNGPIX-COM-Popcorn-PNG-Image.png&f=1&nofb=1')
 
     # #Отправка в Discord
     webhook.send()
@@ -128,11 +159,11 @@ def parser():
     else:
         try:
             html = get_html(url)
-            if html.status_code == 200:
+            try:
                 push_content(html.text, url)
                 print('Сообщение успешно отправлено!')
-            else:
-                print('Error')
+            except:
+                print('Error Discord Send')
         except:
             print('Ошибка!\nДанный URL заблокирован или введен не верно!')
 
